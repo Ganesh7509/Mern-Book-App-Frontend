@@ -1,18 +1,83 @@
-# React + Vite
+# 📚 MERN Book Store — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and clean frontend for the MERN Book Store application.  
+This project allows users to **add, update, delete, and view books** through a responsive UI.  
+The frontend is deployed on **Vercel**.
+## 🚀 Live Demo  
+🔗 **Frontend URL:** https://mern-book-app-frontend.vercel.app/
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack  
+- **React.js**
+- **Axios** (API Calls)
+- **CSS** (Custom Styling)
+- **Vercel** (Deployment)
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📂 Project Structure  
+client/
+│── src/
+│ ├── components/
+│ │ ├── Home.jsx
+│ │ └── Navbar.jsx
+│ ├── App.jsx
+│ ├── index.css
+│ └── main.jsx
+│── package.json
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Features  
+✔ Add new books  
+✔ Update existing books  
+✔ Delete books  
+✔ View all books in a table  
+✔ Backend connected via REST API  
+✔ Fully responsive UI  
+
+---
+
+## 🔗 API Endpoints Used  
+The frontend communicates with the backend (Render) using these endpoints:
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/books` | Fetch all books |
+| POST | `/add-book` | Add new book |
+| PUT | `/update/:id` | Update book |
+| DELETE | `/delete/:id` | Delete book |
+
+**Base URL:**  
+https://mern-book-app-backend-3usw.onrender.com
+---
+
+## 📘 Important Components  
+
+### **Home.jsx**
+- Displays form to create/edit books  
+- Displays all books in table  
+- Handles delete, update, fetch functions
+
+### **Navbar.jsx**
+Simple navbar with app name & menu items.
+
+---
+
+## ▶️ Run Project Locally  
+
+
+npm install
+npm run dev
+
+
+---
+## 🌐 Deployment  
+The app is deployed on **Vercel**.
+---
+
+## 🙌 Author  
+**Ganesh Kunde**  
+Frontend Developer | MERN Stack  
