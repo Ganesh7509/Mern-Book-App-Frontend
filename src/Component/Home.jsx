@@ -15,7 +15,9 @@ const Home = () => {
 
   // Fetch All Books
   const fetchBooks = async () => {
-    const res = await axios.get("http://localhost:5000/books");
+    const res = await axios.get(
+      "https://mern-book-app-backend-3usw.onrender.com/books"
+    );
     setBooks(res.data);
   };
 
@@ -33,10 +35,16 @@ const Home = () => {
     e.preventDefault();
 
     if (editId) {
-      await axios.put(`http://localhost:5000/update/${editId}`, form);
+      await axios.put(
+        `https://mern-book-app-backend-3usw.onrender.com/update/${editId}`,
+        form
+      );
       setEditId(null);
     } else {
-      await axios.post("http://localhost:5000/add-book", form);
+      await axios.post(
+        "https://mern-book-app-backend-3usw.onrender.com/add-book",
+        form
+      );
     }
 
     setForm({
@@ -52,7 +60,9 @@ const Home = () => {
 
   // Delete
   const deleteBook = async (id) => {
-    await axios.delete(`http://localhost:5000/delete/${id}`);
+    await axios.delete(
+      `https://mern-book-app-backend-3usw.onrender.com/delete/${id}`
+    );
     fetchBooks();
   };
 
@@ -73,7 +83,6 @@ const Home = () => {
       {/* FORM */}
       <form onSubmit={handleSubmit}>
         <div className="form-grid">
-
           <div className="input-group">
             <label>Book Name</label>
             <input
@@ -107,7 +116,7 @@ const Home = () => {
           <div className="input-group">
             <label>Selling Price</label>
             <input
-            type="number"
+              type="number"
               name="price"
               value={form.price}
               onChange={handleChange}
@@ -125,7 +134,6 @@ const Home = () => {
               required
             />
           </div>
-
         </div>
 
         <div className="submit-wrapper">
@@ -176,14 +184,11 @@ const Home = () => {
                     Edit
                   </button>
                 </td>
-
               </tr>
             ))}
           </tbody>
-
         </table>
       </div>
-
     </div>
   );
 };
